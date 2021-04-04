@@ -1,0 +1,50 @@
+# 激活指定的profile
+# 1、在配置文件中指定spring.profiles.active=dev
+# 2、命令行：java -jar *.jar --spring.profiles.active=dev
+# 3、虚拟机参数：-Dspring.profiles.active=dev
+#
+# 配置文件加载位置
+# 1、springboot 启动会扫描以下位置的application.properties或者application.yml文件作为Spring boot的默认配置文件
+#  –file:./config/
+#  –file:./
+#  –classpath:/config/
+#  –classpath:/
+# 2、优先级由高到底，高优先级的配置会覆盖低优先级的配置；
+# 3、SpringBoot会从这四个位置全部加载主配置文件；互补配置；
+# 4、可以通过spring.config.location来改变默认的配置文件位置，部署时指定配置，于当前配置共同起作用形成互补配置
+#   java -jar *.jar --spring.config.location=G:/application.properties
+spring:
+  profiles:
+#    active: uat
+    active: sit
+---
+# 文档块
+spring:
+  config:
+    activate:
+      on-profile: uat
+# 设置端口为8081
+server:
+  port: 8081
+  servlet:
+    context-path: /hello
+customize:
+  person:
+    birth: 2021/04/03
+    boss: true
+    other-info:
+      addr: 高新区
+      work: IT
+    # map的行内写法
+    #    other-info: {addr: 高新区, work: IT}
+    person-age: 20
+    person-dog:
+      dogName:  ${customize.person.person-name:默认的人}的小花
+      dogAge: 5
+    #    person-habit-list: [打游戏,看电影]
+    person-name: 王五
+    person-habit-list:
+      - 旅游
+      - 看小说
+    random-num: ${random.int(3)}
+    person-email: 789@qq.com

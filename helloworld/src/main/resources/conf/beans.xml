@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="person4" class="com.wyg.helloworld.beans.Person4">
+        <property name="personName" value="熊二"/>
+        <property name="personAge" value="21"/>
+        <property name="personDog" ref="dog"/>
+        <property name="personHabitList">
+            <list>
+                <value>唱歌</value>
+                <value>画画</value>
+            </list>
+        </property>
+        <property name="birth" value="2021/04/04"/>
+        <property name="boss" value="true"/>
+        <property name="otherInfo">
+            <map>
+                <entry key="addr" value="高新区"/>
+                <entry key="work" value="docker"/>
+            </map>
+        </property>
+    </bean>
+    <bean id="dog" class="com.wyg.helloworld.beans.Dog">
+        <property name="dogName" value="黑子"/>
+        <property name="dogAge" value="1"/>
+    </bean>
+</beans>

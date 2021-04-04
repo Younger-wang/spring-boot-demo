@@ -1,0 +1,25 @@
+# 设置端口为8081
+server:
+  port: 8081
+  servlet:
+    context-path: /hello
+customize:
+  person:
+    birth: 2021/04/03
+    boss: true
+    other-info:
+      addr: 高新区
+      work: IT
+    # map的行内写法
+#    other-info: {addr: 高新区, work: IT}
+    personAge: 20
+    person-dog:
+      dogName:  ${customize.person.person-name:默认的人}的小白
+      dogAge: 5
+#    person-habit-list: [打游戏,看电影]
+    person-name: 李四
+    person-habit-list:
+      - 打游戏
+      - 看小说
+    random-num: ${random.int(15)}
+    person-email: 123@qq.com
