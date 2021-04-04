@@ -3,6 +3,7 @@ server:
   port: 8081
   servlet:
     context-path: /hello
+# 自定义配置项
 customize:
   person:
     birth: 2021/04/03
@@ -23,3 +24,20 @@ customize:
       - 看小说
     random-num: ${random.int(15)}
     person-email: 123@qq.com
+
+
+# 日志相关配置
+# 配置日志级别
+logging:
+  level:
+    com.wyg.helloworld: debug
+  file:
+# 可以指定完整的路径；
+    name: f:/springboot1.log
+# 在当前磁盘的根路径下创建spring文件夹和里面的log文件夹；使用 spring.log 作为默认文件
+#    path: /spring/log
+#  pattern:
+#  在控制台输出的日志的格式
+# 指定文件中日志输出的格式
+#    file: %clr(%d{${LOG_DATEFORMAT_PATTERN:-yyyy-MM-dd}})==={faint} === %clr(${LOG_LEVEL_PATTERN:-%5p})
+#    console: %clr(%d{${LOG_DATEFORMAT_PATTERN:-yyyy-MM-dd}}){faint} %clr(${LOG_LEVEL_PATTERN:-%5p})

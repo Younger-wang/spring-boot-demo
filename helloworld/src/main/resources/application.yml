@@ -48,3 +48,14 @@ customize:
       - 看小说
     random-num: ${random.int(3)}
     person-email: 789@qq.com
+
+# 日志相关配置
+# 配置日志级别
+logging:
+  level:
+    com.wyg.helloworld: debug
+  file:
+    # 可以指定完整的路径；
+    name: f:/springboot1.log
+  # 在当前磁盘的根路径下创建spring文件夹和里面的log文件夹；使用 spring.log 作为默认文件
+  #    path: /spring/log
