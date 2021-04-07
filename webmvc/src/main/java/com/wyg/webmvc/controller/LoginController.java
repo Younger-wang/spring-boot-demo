@@ -1,6 +1,6 @@
 package com.wyg.webmvc.controller;
 
-import com.wyg.webmvc.exception.UserNotExistException;
+import com.wyg.webmvc.config.myException.UserNotExistException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
@@ -19,6 +19,7 @@ public class LoginController {
         if ("admin".equals(loginName) && "123456".equals(password)) {
             // 登录成功
             LOG.info("登录成功");
+            // 将loginName放入session，方便后续进行拦截
             session.setAttribute("loginName", loginName);
             //重定向请求，防止表单重复提交
             return "redirect:/main.html";

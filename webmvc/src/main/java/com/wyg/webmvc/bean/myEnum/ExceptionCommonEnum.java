@@ -1,6 +1,6 @@
-package com.wyg.webmvc.enums;
+package com.wyg.webmvc.bean.myEnum;
 
-import com.wyg.webmvc.exception.BaseErrorInfoInterface;
+import com.wyg.webmvc.config.myException.BaseErrorInfoInterface;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 

@@ -1,4 +1,4 @@
-package com.wyg.webmvc.servlet;
+package com.wyg.webmvc.config.myServlet;
 
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;

@@ -1,4 +1,4 @@
-package com.wyg.webmvc.linstener;
+package com.wyg.webmvc.config.myLinstener;
 
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;

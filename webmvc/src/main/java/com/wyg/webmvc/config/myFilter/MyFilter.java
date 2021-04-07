@@ -1,4 +1,4 @@
-package com.wyg.webmvc.filter;
+package com.wyg.webmvc.config.myFilter;
 
 import javax.servlet.*;
 import java.io.IOException;
