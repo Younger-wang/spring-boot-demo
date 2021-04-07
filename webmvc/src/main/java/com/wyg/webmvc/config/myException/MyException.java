@@ -1,7 +1,7 @@
-package com.wyg.webmvc.exception;
+package com.wyg.webmvc.config.myException;
 
 import com.wyg.webmvc.bean.ResultBody;
-import com.wyg.webmvc.enums.ExceptionCommonEnum;
+import com.wyg.webmvc.bean.myEnum.ExceptionCommonEnum;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.ControllerAdvice;
@@ -38,7 +38,7 @@ public class MyException {
      */
     @ExceptionHandler(UserNotExistException.class)
     public ResultBody<Object> exceptionHandler(UserNotExistException e, HttpServletRequest request) {
-        LOGGER.error("发生用户不存在异常！原因是：", e);
+        LOGGER.error("发生用户不存在异常！原因是：{}", e.getMessage());
         return ResultBody.fail(ExceptionCommonEnum.BODY_NOT_MATCH);
     }
 

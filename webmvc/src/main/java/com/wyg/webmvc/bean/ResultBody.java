@@ -1,8 +1,7 @@
 package com.wyg.webmvc.bean;
 
-import com.wyg.webmvc.enums.ExceptionCommonEnum;
-import com.wyg.webmvc.exception.BaseErrorInfoInterface;
-import com.wyg.webmvc.exception.BaseWygException;
+import com.wyg.webmvc.bean.myEnum.ExceptionCommonEnum;
+import com.wyg.webmvc.config.myException.BaseErrorInfoInterface;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 

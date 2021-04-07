@@ -1,4 +1,4 @@
-package com.wyg.webmvc.exception;
+package com.wyg.webmvc.config.myException;
 
 import lombok.Data;
 
