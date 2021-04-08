@@ -74,7 +74,4 @@ public class MyMvcConfig implements WebMvcConfigurer {
     public LocaleResolver myLocaleResolver(){
         return new MyLocaleResolver();
     }
-
-
-
 }
