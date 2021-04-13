@@ -6,7 +6,7 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
     username: root
     password: 123456
-    schema: classpath:department.sql
+#    schema: classpath:department.sql
     #数据库已经存在department表了，不需要再次执行ddl-schema.sql
     initialization-mode: never
     type: com.alibaba.druid.pool.DruidDataSource
