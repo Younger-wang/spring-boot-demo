@@ -1,5 +1,7 @@
 package com.wyg.mydata.controller;
 
+import com.wyg.mydata.mapper.DeptMapper;
+import com.wyg.mydata.vo.DeptVO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -14,8 +16,16 @@ public class DepartmentController {
     @Autowired
     private JdbcTemplate jdbcTemplate;
 
+    @Autowired
+    private DeptMapper deptMapper;
+
     @GetMapping("/findDepartment")
     public List<Map<String, Object>> getDepartment() {
         return jdbcTemplate.queryForList("select * from department");
+    }
+
+    @GetMapping("/getDeptListInMybatis")
+    public List<DeptVO> getDeptListInMybatis() {
+        return deptMapper.findDeptList();
     }
 }
