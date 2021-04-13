@@ -1,13 +1,13 @@
-package com.wyg.myjdbc;
+package com.wyg.mydata;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class MyJdbcApplication {
+public class MyDataApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(MyJdbcApplication.class, args);
+		SpringApplication.run(MyDataApplication.class, args);
 	}
 
 }

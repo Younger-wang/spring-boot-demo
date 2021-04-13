@@ -1,4 +1,4 @@
-package com.wyg.myjdbc;
+package com.wyg.mydata;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,7 +12,7 @@ import java.util.List;
 import java.util.Map;
 
 @SpringBootTest
-class MyJdbcApplicationTests {
+class MyDataApplicationTests {
 
 	@Autowired
 	private DataSource dataSource;
