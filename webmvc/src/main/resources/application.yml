@@ -1,2 +1,9 @@
 server:
   port: 8900
+
+#自定义starter
+com:
+  wyg:
+    hello:
+      prefix: hello
+      suffix: ！！！
