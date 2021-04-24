@@ -11,7 +11,7 @@
 	<groupId>com.wyg</groupId>
 	<artifactId>wyg-auto-starter</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>starter1</name>
+	<name>wyg-auto-starter</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>
 		<java.version>1.8</java.version>

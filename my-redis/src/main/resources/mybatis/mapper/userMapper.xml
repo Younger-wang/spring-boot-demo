@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wyg.myredis.mapper.UserMapper">
+    <select id="getUserById" resultType="com.wyg.myredis.vo.UserVO">
+
+        select id,userName,email,age,gender,d_id dId from user where id = #{userId,jdbcType=NUMERIC}
+    </select>
+    <insert id="insertUser">
+        INSERT INTO user (userName,email,age,gender,d_Id)
+        value (#{userName,jdbcType=VARCHAR},#{email,jdbcType=VARCHAR},#{age,jdbcType=NUMERIC},
+               #{gender,jdbcType=NUMERIC},#{dId,jdbcType=NUMERIC})
+    </insert>
+    <update id="updateUser">
+        update user set userName=#{userName,jdbcType=VARCHAR},email=#{email,jdbcType=VARCHAR},
+            age=#{age,jdbcType=NUMERIC},gender=#{gender,jdbcType=NUMERIC},d_id=#{dId,jdbcType=NUMERIC} where id=#{id}
+    </update>
+    <delete id="delete">
+        delete  from user where id = #{id,jdbcType=NUMERIC}
+    </delete>
+</mapper>
