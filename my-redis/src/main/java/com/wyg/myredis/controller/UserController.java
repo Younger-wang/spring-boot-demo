@@ -3,10 +3,12 @@ package com.wyg.myredis.controller;
 import com.wyg.myredis.mapper.UserMapper;
 import com.wyg.myredis.vo.UserVO;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.CacheConfig;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
+@CacheConfig(cacheManager = "userCacheManager")
 public class UserController {
 
     @Autowired
